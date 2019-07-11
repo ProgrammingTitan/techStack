@@ -1,0 +1,19 @@
+.piping{
+  margin:10px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.navBar{
+  background-color: darkgrey;
+}
+
+.link{
+  text-decoration: none;
+  color:black;
+}
+
+.headline-thumbnail{
+  margin: 50px;
+}
+
