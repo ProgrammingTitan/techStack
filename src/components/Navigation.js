@@ -8,6 +8,8 @@ import {
   NavItem,
   NavLink} from 'reactstrap';
 
+import SearchButton from './SearchButton';
+
 export default class Navigation extends React.Component {
   constructor(props) {
     super(props);
@@ -30,14 +32,14 @@ export default class Navigation extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-           <NavItem><NavLink className="piping" href="/section/US" inline>US</NavLink></NavItem>
            <NavItem><NavLink className="piping" href="/section/Entertainment" >Entertainment</NavLink></NavItem>
            <NavItem><NavLink className="piping" href="/section/Health" >Health</NavLink></NavItem>
            <NavItem><NavLink className="piping" href="/section/Business">Business</NavLink></NavItem>
            <NavItem><NavLink className="piping" href="/section/Technology" >Technology</NavLink></NavItem>
            <NavItem><NavLink className="piping" href="/section/Sports" >Sports</NavLink></NavItem>
-           <NavItem><NavLink className="piping" href="/section/Gaming" >Gaming</NavLink></NavItem>
+           <NavItem><NavLink className="piping" href="/Search/Gaming" >Gaming</NavLink></NavItem>
            <NavItem><NavLink className="piping" href="/section/Feedback">Feeback</NavLink></NavItem>
+           <NavItem><SearchButton /></NavItem>
             </Nav>
           </Collapse>
         </Navbar>

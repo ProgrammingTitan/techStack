@@ -20,7 +20,6 @@ class SideBar extends React.Component{
 
         const response = await fetch(url);
         const json = await response.json();
-        console.log(json);
 
         this.setState({data : json.articles,
                         gotData : true});

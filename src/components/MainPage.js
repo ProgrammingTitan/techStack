@@ -7,6 +7,7 @@ import GreetingsBox from './admin/GreetingsBox';
 import HeadlineList from './admin/HeadlineList';
 import AdList from './admin/AdList';
 import UpdateList from './admin/UpdateList';
+import BottomNav from './BottomNav';
 
 const MainPage = () => {
     return(
@@ -25,7 +26,7 @@ const MainPage = () => {
             <HeadlineList />
             <AdList />
             <UpdateList />
-            <NavItem><NavLink className="piping" href="/EmployeePage" inline>EmployeePage</NavLink></NavItem>
+            <BottomNav />
         </Container>
     );
 };

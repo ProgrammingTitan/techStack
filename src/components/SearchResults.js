@@ -6,51 +6,31 @@ import { Container, Row, Col } from 'reactstrap';
 import AmazonAds from './AmazonAds';
 import BottomNav from './BottomNav';
 
-import business from  '../logos/business-sub.jpg' ;
-import gaming from  '../logos/gaming-sub.png' ;
-import politics from  '../logos/politics-sub.jpg' ;
-import sports from  '../logos/sports-sub.jpg' ;
-import tech from  '../logos/tech-sub.png' ;
-import USA from  '../logos/USA-sub.png' ;
-import world from  '../logos/world-sub.jpg' ;
-
-class CategoryPage extends React.Component{
-
-
-    constructor(props) {
-
-        super(props);
-        this.state = {
-            data: {},
-            gotData: false,
-            inputText: '',
-            category : this.props.match.match.params.id,
-            logo: undefined
-        };
-    }
+class SearchResults extends React.Component{
     
-    async componentDidMount() {
-       
-        const key = "be04037ec49e466087cc0901fb6ba5ec";
-        const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${this.state.category}&apiKey=${key}`);
+    state = {
+        searchString : this.props.match.match.params.id,
+        data: {},
+        gotData: false
+    } 
+    
+    async componentDidMount(){
+    const key = "be04037ec49e466087cc0901fb6ba5ec";
+        const response = await fetch(`https://newsapi.org/v2/everything?q=${this.state.searchString}&apiKey=${key}`);
         const json = await response.json();
         console.log(json);
         this.setState({
             data: json.articles,
             gotData: true,
-            
         });
-
-
-        
-
+        console.log(this.state.searchString);
     }
-
-render(){
-    return(
-        <Container fluid>
+    
+    render(){
+        return(
+            <div>
+            <Container fluid>
             <Nav /> 
-            
                 <Row>
                     <Col xs="12" sm="4" md="4" lg="4">
                         <SideBar/>
@@ -65,7 +45,12 @@ render(){
                                     <Thread
                                         key={child.index}
                                         title={child.title}
+                                        // points={data.score}
+                                        // comments={data.num_comments}
+                                        // subreddit={data.subreddit_name_prefixed}
+                                        // user={data.author}
                                         data={child}
+                                        // img = {this.state.logo}
                                     />
                                     
                             );
@@ -76,10 +61,14 @@ render(){
                 </Row>
                 <BottomNav />
                 </Container>
-    );
-}
+            </div>
+
+        );
+    }
+
+
 
 
 }
 
-export default CategoryPage;
+export default SearchResults;

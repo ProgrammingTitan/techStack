@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import { loadUser } from './../actions/authActions';
 import store from './../store';
 import EmployeePage from './admin/EmployeePage';
+import SearchResults from './SearchResults';
 
 class Router extends React.Component{
 
@@ -21,100 +22,14 @@ class Router extends React.Component{
             <Switch>
             <Route path="/" component ={MainPage} exact></Route>
             <Route 
-            path= '/Section/US'
-            render={ (props) => 
-                <div>
+            path= '/Section/:id'
+            render={ (match) => 
                 <CategoryPage 
-                subreddit = ''
+                match = {match}
                 />
-                </div>}
-            exact ></Route>
-            
-            <Route 
-            path= '/Section/Entertainment'
-            render={ (props) => 
-                <div>
-                <p></p>
-                <CategoryPage 
-                subreddit = 'entertainment'
-                />
-                </div>
-                }
-            exact ></Route>
-            <Route 
-            path= '/Section/Health'
-            render={ (props) => 
-                <div>
-                <p></p>
-                <p></p>
-                <CategoryPage 
-                subreddit = 'health'
-                />
-                </div>
-                }
-            exact ></Route>
-            <Route 
-            path= '/Section/Business'
-            render={ (props) => 
-                <div>
-                <p></p>
-                <p></p>
-                <p></p>
-                <CategoryPage 
-                subreddit = 'business'
-                />
-                </div>
-                }
-            exact ></Route>
-            
-            <Route 
-            path= '/Section/Technology'
-            render={ (props) => 
-                <div>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <CategoryPage 
-                subreddit = 'technology'
-                />
-                </div>
-                }
-            exact >
-            </Route>
-                        
-            <Route 
-            path= '/Section/Sports'
-            render={ (props) => 
-                <div>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <CategoryPage 
-                subreddit = 'sports'
-                />
-                </div>
                 }
             ></Route>
-                        <Route 
-            path= '/Section/Gaming'
-            render={ (props) => 
-                <div>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <CategoryPage 
-                subreddit = 'gamernews'
-                />
-                </div>
-                }
-            exact ></Route>
-                        <Route 
+            <Route 
             path= '/Section/Feedback'
             render={ (props) => <CategoryPage 
                 subreddit = {undefined}
@@ -123,6 +38,12 @@ class Router extends React.Component{
             <Route
             path='/EmployeePage'
             render = { () => <EmployeePage />}
+            ></Route>
+            <Route 
+            path= '/Search/:id'
+            render={ (match) => <SearchResults 
+                match = {match}
+            />}
             ></Route>
             </Switch>
 
