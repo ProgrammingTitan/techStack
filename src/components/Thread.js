@@ -48,7 +48,6 @@ class Thread extends React.Component{
               </Row>
         </Container>
       </Jumbotron> */}
-
       <Media className= "mb-4" href={this.props.data.url} style={{link}}>
       <Media left href={this.props.data.url}>
         <Media  className= "mr-4" object src={this.props.data.urlToImage} style={imgStyle} alt="Generic placeholder image" />

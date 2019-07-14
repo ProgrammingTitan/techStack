@@ -77,7 +77,7 @@ class AmazonAds extends Component {
           onExiting={this.onExiting}
           onExited={this.onExited}
           key={item.src}
-        >
+        > 
           <img src={item.src} alt={item.altText} height="450" width="650" align="right"/>
           <a href={item.link}><CarouselCaption className="text-info" captionText={item.altText} captionHeader={item.caption} /></a>
         </CarouselItem>
