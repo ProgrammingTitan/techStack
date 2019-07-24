@@ -7,6 +7,7 @@ import AdList from './admin/AdList';
 import { Container, Row, Col } from 'reactstrap';
 import AmazonAds from './AmazonAds';
 import BottomNav from './BottomNav';
+import CategoryJumbo from './CategoryJumbo';
 
 import business from  '../logos/business-sub.jpg' ;
 import gaming from  '../logos/gaming-sub.png' ;
@@ -103,6 +104,7 @@ render(){
                         })
                 }
                 </Col>
+                <CategoryJumbo searchString = {this.state.category} />
                 <StoryCard 
                     data = {this.state.upperData}
                 />
@@ -115,7 +117,7 @@ render(){
             <AdList />
             </Col>
             </Row>
-                <BottomNav />
+            <BottomNav />
                 </Container>
     );
 }

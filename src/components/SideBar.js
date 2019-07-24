@@ -27,6 +27,11 @@ class SideBar extends React.Component{
 
     
     render(){
+        const mediaStyle = {
+            color: "black",
+            "text-decoration" : "none"
+          }
+          
         return(
         <div>
             <ListGroup>
@@ -34,7 +39,7 @@ class SideBar extends React.Component{
                         this.state.gotData && this.state.data.map((child, index) => {
                             const { data } = child;
                             return (
-                                <ListGroupItem><a className="link" href={child.url} >{child.title}</a></ListGroupItem>
+                                <ListGroupItem><a className="link" href={child.url} style={mediaStyle}>{child.title}</a></ListGroupItem>
                             );
                         })
                  }

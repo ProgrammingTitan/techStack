@@ -21,7 +21,8 @@ router.post('/', auth, (req,res) => {
     const newAd = new FeaturedAd({
         headline: req.body.headline,
         description: req.body.description,
-        imageURL: req.body.imageURL
+        imageURL: req.body.imageURL,
+        url: req.body.url
 
     });
 

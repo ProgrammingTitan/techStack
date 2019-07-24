@@ -3,15 +3,6 @@ import {Jumbotron, Button, Container, Row, Col, Media} from 'reactstrap';
 
 class Thread extends React.Component{
     state = {
-        styles : {
-            titleStyle: {
-                color: 'red',
-            },
-            thumbSize: {
-                width: 140,
-                height: 105
-            },
-        },
 
         data : this.props,
 
@@ -27,12 +18,15 @@ class Thread extends React.Component{
             maxWidth: 300
           }
 
-        const link = {
+        const mediaStyle = {
+            color: "black",
             "text-decoration" : "none"
         }
 
+
         return (
             <div>
+
       {/* <Jumbotron fluid style={{"background" : "linear-gradient(0deg, rgba(110,157,163,0.23015143557422968) 0%, rgba(176,192,194,0.19373686974789917) 100%, rgba(209,209,209,0.8491990546218487) 100%, rgba(144,63,1,0.8604035364145658) 100%)"}}>
           <Container fluid>
               <Row>
@@ -48,12 +42,12 @@ class Thread extends React.Component{
               </Row>
         </Container>
       </Jumbotron> */}
-      <Media className= "mb-4" href={this.props.data.url} style={{link}}>
+      <Media className= "mb-4" href={this.props.data.url} style={mediaStyle}>
       <Media left href={this.props.data.url}>
         <Media  className= "mr-4" object src={this.props.data.urlToImage} style={imgStyle} alt="Generic placeholder image" />
       </Media>
       <Media body>
-        <Media heading>
+        <Media heading >
           {this.props.title}
         </Media>
             {this.props.data.description}

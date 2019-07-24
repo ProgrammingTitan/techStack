@@ -9,7 +9,10 @@ import {
 import AdDeleteButton from './AdDeleteButton';
 
 
-
+const imgStyle = {
+  maxHeight: 300,
+  maxWidth: 300
+}
 
 class AmazonAds extends Component {
   constructor(props) {
@@ -54,7 +57,7 @@ class AmazonAds extends Component {
 
   render() {
     const { activeIndex } = this.state;
- 
+  
     console.log(this.state.items);
     console.log(this.props.ads);
     const slides = this.props.ads.map((item) => {
@@ -65,11 +68,12 @@ class AmazonAds extends Component {
           onExited={this.onExited}
           key={item._id}
         >
+            <a href={item.url}>
                 
-          <img src={item.imageURL} alt={item.description} height="450" width="650" align="right"/>
-          <a href="#"><CarouselCaption className="text-info" captionText={item.description} captionHeader={item.headline} /></a>
+          <img src={item.imageURL} alt={item.description} style = {imgStyle} align="center"/>
+          <CarouselCaption className="text-info" captionText={item.description} captionHeader={item.headline} />
         
-          
+          </a>
         </CarouselItem>
         
       );

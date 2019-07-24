@@ -39,7 +39,7 @@ export default class Navigation extends React.Component {
            <NavItem><NavLink className="piping" href="/section/Sports" >Sports</NavLink></NavItem>
            <NavItem><NavLink className="piping" href="/Search/Gaming" >Gaming</NavLink></NavItem>
            <NavItem><NavLink className="piping" href="/section/Feedback">Feeback</NavLink></NavItem>
-           <NavItem><SearchButton /></NavItem>
+           <NavItem><SearchButton/></NavItem>
             </Nav>
           </Collapse>
         </Navbar>

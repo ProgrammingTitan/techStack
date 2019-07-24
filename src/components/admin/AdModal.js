@@ -17,7 +17,8 @@ class AdModal extends React.Component{
         modal: false,
         headline: '',
         description: '',
-        imageURL: ''
+        imageURL: '',
+        url: ''
     }
 
     toggle = () => {
@@ -36,7 +37,8 @@ class AdModal extends React.Component{
         const newAd = {
             headline: this.state.headline,
             description: this.state.description,
-            imageURL: this.state.imageURL
+            imageURL: this.state.imageURL,
+            url: this.state.url
         }
 
         //Add greeting via addGreeting action
@@ -91,6 +93,13 @@ class AdModal extends React.Component{
                                     name = "imageURL"
                                     id = "ad"
                                     placeholder = "Add Image URL"
+                                    onChange = {this.onChange}
+                                />
+                                <Input
+                                    type="text"
+                                    name = "url"
+                                    id = "ad"
+                                    placeholder = "Add URL"
                                     onChange = {this.onChange}
                                 />
                                 <Button

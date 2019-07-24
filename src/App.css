@@ -17,3 +17,7 @@
   margin: 50px;
 }
 
+a:hover { 
+  color: blue !important;
+  text-decoration: none;
+}

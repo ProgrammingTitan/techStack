@@ -17,7 +17,8 @@ class HeadlineModal extends React.Component{
         modal: false,
         headline: '',
         description: '',
-        imageURL: ''
+        imageURL: '',
+        url: ''
     }
 
     toggle = () => {
@@ -36,7 +37,8 @@ class HeadlineModal extends React.Component{
         const newHeadline = {
             headline: this.state.headline,
             description: this.state.description,
-            imageURL: this.state.imageURL
+            imageURL: this.state.imageURL,
+            url: this.state.url
         }
 
         //Add greeting via addGreeting action
@@ -91,6 +93,13 @@ class HeadlineModal extends React.Component{
                                     name = "imageURL"
                                     id = "headline"
                                     placeholder = "Add Image URL"
+                                    onChange = {this.onChange}
+                                />
+                                <Input
+                                    type="text"
+                                    name = "url"
+                                    id = "headline"
+                                    placeholder = "Add URL"
                                     onChange = {this.onChange}
                                 />
                                 <Button

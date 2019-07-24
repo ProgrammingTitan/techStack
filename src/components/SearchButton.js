@@ -34,8 +34,6 @@ class SearchButton extends React.Component {
         modal: !prevState.modal
     }));
 
-    console.log(this.state.name);
-
     this.setState({
         search: true,
         searchString: `/Search/${this.state.name}`
@@ -48,8 +46,8 @@ class SearchButton extends React.Component {
       }
 
     return (
-      <div>
-        <Button color="danger" onClick={this.toggle}>Search</Button>
+      <div  className="mt-2" >
+        <Button outline color="primary" onClick={this.toggle}>Search</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Search</ModalHeader>
           <ModalBody>

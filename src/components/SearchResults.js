@@ -6,6 +6,7 @@ import { Container, Row, Col } from 'reactstrap';
 import AmazonAds from './AmazonAds';
 import BottomNav from './BottomNav';
 import StoryCard from './Card';
+import AdList from './admin/AdList';
 
 class SearchResults extends React.Component{
     
@@ -79,7 +80,14 @@ class SearchResults extends React.Component{
                 <StoryCard 
                     data = {this.state.upperData}
                 />
-                <AmazonAds />
+                </Row>
+                <Row>
+                <Col xs="12" sm="6" md="6" lg="6">
+            <AmazonAds />
+            </Col>
+            <Col xs="12" sm="6" md="6" lg="6">
+            <AdList />
+            </Col>
                 </Row>
                 <BottomNav />
                 </Container>

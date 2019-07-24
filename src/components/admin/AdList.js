@@ -26,14 +26,15 @@ class AdList extends React.Component{
                 {this.props.isAuthenticated ?
 
                 <ul>
-                {ads.map(({ _id, headline, description, imageURL}) => (
+                {ads.map(({ url, _id, headline, description, imageURL}) => (
                     <div>
                     {this.props.isAuthenticated ? <AdDeleteButton _id = {_id}
                     // deleteAd = {this.props.deleteAd(_id)}
                     
                     /> : null}
                         <Media>
-                            <Media left href="#">
+                        <a href={url}>
+                            <Media left href={url}>
                             <img src={imageURL} width="250" height="200" alt="me" />
                             </Media>
                             <Media body>
@@ -42,6 +43,7 @@ class AdList extends React.Component{
                                 </Media>
                                 {description}
                             </Media>
+                            </a>
                         </Media>
                     </div>
                 ))}
