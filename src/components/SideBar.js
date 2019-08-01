@@ -38,7 +38,7 @@ class SideBar extends React.Component{
             <ListGroup>
                 {
                         this.state.gotData && this.state.data.map((child, index) => {
-                            const { data } = child;
+                            // const { data } = child;
                             return (
                                 <ListGroupItem><a className="link" href={child.url} style={mediaStyle}>{child.title}</a></ListGroupItem>
                             );

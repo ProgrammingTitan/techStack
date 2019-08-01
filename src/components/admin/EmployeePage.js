@@ -1,6 +1,6 @@
 import React , {Fragment} from 'react';
 import Nav from './../Navigation';
-import {Container, Row, Col} from 'reactstrap';
+import {Container} from 'reactstrap';
 import RegisterModal from './auth/RegisterModal';
 import LoginModal from './auth/LoginModal';
 import Logout from './auth/Logout';
@@ -14,6 +14,7 @@ import UpdateList from '../admin/UpdateList';
 import UpdateModal from '../admin/UpdateModal';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import BottomNav from '../BottomNav';
 
 class EmployeePage extends React.Component{
     
@@ -54,7 +55,7 @@ class EmployeePage extends React.Component{
             <Container>
             { isAuthenticated ? authLinks : guestLinks}      
             </Container>  
-            
+            <BottomNav />
         </Container>
     );
     }

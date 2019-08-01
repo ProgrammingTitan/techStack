@@ -8,6 +8,7 @@ import { loadUser } from './../actions/authActions';
 import store from './../store';
 import EmployeePage from './admin/EmployeePage';
 import SearchResults from './SearchResults';
+import ChanceToAd from './admin/ChanceToAd';
 
 class Router extends React.Component{
 
@@ -38,6 +39,10 @@ class Router extends React.Component{
             <Route
             path='/EmployeePage'
             render = { () => <EmployeePage />}
+            ></Route>
+             <Route
+            path='/Sponsors'
+            render = { () => <ChanceToAd />}
             ></Route>
             <Route 
             path= '/Search/:id'

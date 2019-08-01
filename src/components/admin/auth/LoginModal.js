@@ -8,7 +8,6 @@ import {
     FormGroup,
     Label,
     Input,
-    NavLink,
     Alert
 } from 'reactstrap';
 import { connect } from 'react-redux';
@@ -33,7 +32,7 @@ class LoginModal extends React.Component{
 
     componentDidUpdate(prevProps) {
         const { error, isAuthenticated } = this.props;
-        if(error != prevProps.error) {
+        if(error !== prevProps.error) {
             //Check for register error
             if(error.id === 'LOGIN_FAIL'){
                 this.setState({msg: error.msg.msg})

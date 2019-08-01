@@ -1,8 +1,7 @@
 import React from 'react';
-import {Container, Button, Media } from 'reactstrap';
+import {Container, Button } from 'reactstrap';
 import { connect } from 'react-redux';
 import { getUpdates, deleteUpdate } from './../../actions/updateActions';
-import UpdateModal from './UpdateModal';
 import PropTypes from 'prop-types';
 
 

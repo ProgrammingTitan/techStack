@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardLink,
+import { Card, CardImg, CardBody, 
   CardTitle, CardSubtitle } from 'reactstrap';
 import { getAds, deleteAd } from './../../actions/adActions';
 import { connect } from 'react-redux';

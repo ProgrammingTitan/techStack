@@ -38,7 +38,7 @@ export default class BottomNav extends React.Component {
       <div>
       <Navbar color="white" light expand="md">
         <NavbarToggler onClick={this.toggle} className="mr-auto" />
-        <NavbarBrand href="/"><img src={techStackLogo} style={logoStyles}/></NavbarBrand>
+        <NavbarBrand href="/"><img src={techStackLogo} style={logoStyles} alt="logo"/></NavbarBrand>
         <Collapse isOpen={this.state.isOpen} navbar>
         <Container fluid>
             <Row>
@@ -57,7 +57,7 @@ export default class BottomNav extends React.Component {
             <Col xs="12" sm="12" md="4" lg="4" xl="4">
             <ListGroup>
                 <ListGroupItem  style={mediaStyle} tag="a" href="https://www.patreon.com/user?u=16320739">Contribute</ListGroupItem>
-                <ListGroupItem  style={mediaStyle} tag="a" href="#">Advertise Your Product</ListGroupItem>
+                <ListGroupItem  style={mediaStyle} tag="a" href="/Sponsors">Advertise Your Product</ListGroupItem>
             </ListGroup>
             </Col>
             </Row>

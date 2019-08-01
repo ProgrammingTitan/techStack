@@ -2,7 +2,6 @@ import React from 'react';
 import {Container, Button, Media, Row, Col } from 'reactstrap';
 import { connect } from 'react-redux';
 import { getHeadlines, deleteHeadline } from './../../actions/headlineActions';
-import HeadlineModal from './HeadlineModal';
 import PropTypes from 'prop-types';
 
     const imgStyle = {

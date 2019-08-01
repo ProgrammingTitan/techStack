@@ -1,5 +1,6 @@
 import React from 'react';
-import {Jumbotron, Button, Container, Row, Col, Media} from 'reactstrap';
+import { Container, Row, Col, Media} from 'reactstrap';
+import techStackLogo from '../logos/Techstack.2.jpg';
 
 class Thread extends React.Component{
     state = {
@@ -44,11 +45,12 @@ class Thread extends React.Component{
               </Row>
         </Container>
       </Jumbotron> */}
+    
         <Media href={this.props.data.url} style={mediaStyle}>
         <Row>
           <Media left href={this.props.data.url}>
           <Col  xs="12" sm="12" md="2" lg="2" >
-          <Media  object src={this.props.data.urlToImage} style={imgStyle} alt="Generic placeholder image" />
+          <Media  object src= { this.props.data.urlToImage ? this.props.data.urlToImage : techStackLogo} style={imgStyle} alt="Generic placeholder image" />
           </Col>
         </Media>
       <Col  xs="12" sm="12"  md="7" lg="7" >

@@ -2,7 +2,6 @@ import React from 'react';
 import {Container, Button, Media , Row, Col} from 'reactstrap';
 import { connect } from 'react-redux';
 import { getGreetings, deleteGreeting } from '../../actions/greetingActions';
-import GreetingModal from './GreetingModal';
 import PropTypes from 'prop-types';
 
 

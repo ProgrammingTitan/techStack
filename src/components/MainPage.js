@@ -1,13 +1,11 @@
 import React from 'react';
 import Nav from './Navigation';
 import {Container, Row, Col} from 'reactstrap';
-import {NavItem, NavLink} from 'reactstrap';
 import AmazonAds from './AmazonAds';
 import GreetingsBox from './admin/GreetingsBox';
 import HeadlineList from './admin/HeadlineList';
 import SideBar from './SideBar';
 import AdList from './admin/AdList';
-import AdCarousel from './admin/AdCarousel';
 import UpdateList from './admin/UpdateList';
 import BottomNav from './BottomNav';
 

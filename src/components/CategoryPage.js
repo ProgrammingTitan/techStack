@@ -9,15 +9,6 @@ import AmazonAds from './AmazonAds';
 import BottomNav from './BottomNav';
 import CategoryJumbo from './CategoryJumbo';
 
-import business from  '../logos/business-sub.jpg' ;
-import gaming from  '../logos/gaming-sub.png' ;
-import politics from  '../logos/politics-sub.jpg' ;
-import sports from  '../logos/sports-sub.jpg' ;
-import tech from  '../logos/tech-sub.png' ;
-import USA from  '../logos/USA-sub.png' ;
-import world from  '../logos/world-sub.jpg' ;
-import { runInThisContext } from 'vm';
-
 class CategoryPage extends React.Component{
 
 
@@ -92,7 +83,7 @@ render(){
   
             {
                         this.state.gotData && this.state.middleData.map((child, index) => {
-                            const { data } = child;
+                            // const { data } = child;
                             return (
                                     <Thread
                                         key={child.index}

@@ -6,7 +6,6 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
-import AdDeleteButton from './AdDeleteButton';
 
 
 const imgStyle = {

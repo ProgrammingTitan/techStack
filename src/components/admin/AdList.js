@@ -1,9 +1,8 @@
 import React from 'react';
-import {Container, Button, Media } from 'reactstrap';
+import {Container, Media } from 'reactstrap';
 import { connect } from 'react-redux';
 import { getAds, deleteAd } from './../../actions/adActions';
 import AdDeleteButton from './AdDeleteButton';
-import AdModal from './AdModal';
 import PropTypes from 'prop-types';
 import AdCarousel from './AdCarousel';
 

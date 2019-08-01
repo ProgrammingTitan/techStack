@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, Input, Label, FormGroup } from 'reactstrap';
-import SearchResults from './SearchResults';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, Input, FormGroup } from 'reactstrap';
 import { Redirect } from 'react-router-dom';
 
 class SearchButton extends React.Component {

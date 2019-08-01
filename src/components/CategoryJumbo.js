@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron, Button, Container, Row, Col, ListGroup, ListGroupItem, Badge } from 'reactstrap';
+import { Container, Row, Col, ListGroup, ListGroupItem, Badge } from 'reactstrap';
 import AdBox from './admin/AdBox';
 
 const imgStyle = {
@@ -60,7 +60,7 @@ class CategoryJumbo extends React.Component{
         <Col  xs="12" sm="4" md="4" lg="4">
         {this.state.downData.map((item) => (
                 <a href={item.url}>
-                <img src={item.urlToImage} style={imgStyle} href={item.url}/>
+                <img src={item.urlToImage} style={imgStyle} alt="headline picture" href={item.url}/>
                 </a>
             ))}
         </Col>

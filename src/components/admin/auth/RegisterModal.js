@@ -8,7 +8,6 @@ import {
     FormGroup,
     Label,
     Input,
-    NavLink,
     Alert
 } from 'reactstrap';
 import { connect } from 'react-redux';
@@ -27,7 +26,6 @@ class RegisterModal extends React.Component{
     }
 
     static propTypes= {
-        isAuthenticated: PropTypes.bool,
         error: PropTypes.object.isRequired,
         register: PropTypes.func.isRequired,
         clearErrors: PropTypes.func.isRequired,
@@ -35,8 +33,8 @@ class RegisterModal extends React.Component{
     }
 
     componentDidUpdate(prevProps) {
-        const { error, isAuthenticated } = this.props;
-        if(error != prevProps.error) {
+        const { error } = this.props;
+        if(error !== prevProps.error) {
             //Check for register error
             if(error.id === 'REGISTER_FAIL'){
                 this.setState({msg: error.msg.msg})

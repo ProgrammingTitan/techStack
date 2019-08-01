@@ -65,7 +65,7 @@ class SearchResults extends React.Component{
   
             {
                         this.state.gotData && this.state.middleData.map((child, index) => {
-                            const { data } = child;
+                            // const { data } = child;
                             return (
                                     <Thread
                                         key={child.index}
