@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const config = require('config');
+const path = require('path');
 
 const headlines = require('./routes/api/headlines');
 const updates = require('./routes/api/updates');
@@ -32,6 +33,14 @@ app.use('/api/featuredAds', featuredAds);
 app.use('/api/greetings', greetings);
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/auth', require('./routes/api/auth'));
+
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('build'));
+
+    app.get( '*' , (req,res) => {
+        res.sendFile(path.resolve(__dirname, '' , 'build', 'index.html'));
+    });
+}
 
 const port = process.env.PORT || 5000;
 
