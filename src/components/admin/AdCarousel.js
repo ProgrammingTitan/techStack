@@ -70,7 +70,7 @@ class AmazonAds extends Component {
         >
             <a href={item.url}>
                 
-          <img src={item.imageURL} alt={item.description} style = {imgStyle} align="center"/>
+          <img src={item.imageURL} alt={item.description} style = {imgStyle} align="right"/>
           <CarouselCaption className="text-info" captionText={item.description} captionHeader={item.headline} />
         
           </a>

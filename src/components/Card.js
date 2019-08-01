@@ -32,7 +32,7 @@ const StoryCard = (props) => {
             {props.data.map((child, index)=> {
                 var realTime = child.publishedAt.substring(0,10);
                 return(    
-                <Col xs="4" style={pStyle}>    
+                <Col xs="12" sm="12" md="4" lg="4" xl="4" style={pStyle}>    
         <CardImg top className= "ml-4" width="100%" src={child.urlToImage} style={imgStyle} alt="Card image cap" />
         <CardBody style={mediaStyle}>
           <CardTitle style={titleStyle}><a style={mediaStyle} href={child.url}><b>{child.title}</b></a></CardTitle>

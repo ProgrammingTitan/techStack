@@ -11,6 +11,15 @@ import minecraftPillow from '../amazonPics/Minecraft-Pillow.jpg';
 import carCharger from '../amazonPics/Car-Charger.png';
 import wirelessCharger from '../amazonPics/Wireless-Charger.png';
 
+const carStyles={
+  "margin" : "auto"
+}
+
+const imgStyle = {
+  maxHeight: 600,
+  maxWidth: 600
+}
+
 const items = [
   {
     src: minecraftPillow,
@@ -78,7 +87,7 @@ class AmazonAds extends Component {
           onExited={this.onExited}
           key={item.src}
         > 
-          <img src={item.src} alt={item.altText} height="450" width="650" align="right"/>
+          <img src={item.src} alt={item.altText} style={imgStyle} align="left"/>
           <a href={item.link}><CarouselCaption className="text-info" captionText={item.altText} captionHeader={item.caption} /></a>
         </CarouselItem>
       );
@@ -86,6 +95,7 @@ class AmazonAds extends Component {
 
     return (
       <Carousel
+        style={carStyles}
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}

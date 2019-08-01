@@ -44,10 +44,10 @@ class CategoryJumbo extends React.Component{
         return(
             <Container fluid>
                 <Row>
-                    <Col xs="4">
+                    <Col xs="12" sm="4" md="4" lg="4">
                         <AdBox />
                     </Col>
-        <Col xs="4">
+        <Col xs="12" sm="4" md="4" lg="4">
             {this.state.upData.map((item) => (
                 <ListGroup>
                 <a href={item.url} style={mediaStyle}>
@@ -57,7 +57,7 @@ class CategoryJumbo extends React.Component{
             ))}
             {console.log(this.state.data)}
         </Col>
-        <Col xs="4">
+        <Col  xs="12" sm="4" md="4" lg="4">
         {this.state.downData.map((item) => (
                 <a href={item.url}>
                 <img src={item.urlToImage} style={imgStyle} href={item.url}/>

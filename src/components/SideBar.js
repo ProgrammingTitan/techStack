@@ -29,7 +29,8 @@ class SideBar extends React.Component{
     render(){
         const mediaStyle = {
             color: "black",
-            "text-decoration" : "none"
+            "text-decoration" : "none",
+            margin: "auto"
           }
           
         return(

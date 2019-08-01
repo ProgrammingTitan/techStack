@@ -9,6 +9,12 @@ import {
   NavLink} from 'reactstrap';
 
 import SearchButton from './SearchButton';
+import techStackLogo from '../logos/Techstack.2.jpg';
+
+const logoStyles ={
+  maxHeight: 30,
+  maxWidth: 30
+}
 
 export default class Navigation extends React.Component {
   constructor(props) {
@@ -27,8 +33,8 @@ export default class Navigation extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">techStack</NavbarBrand>
+        <Navbar color="white" light expand="md">
+          <NavbarBrand href="/"><img src={techStackLogo} style={logoStyles}/>    techStack</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -38,7 +44,6 @@ export default class Navigation extends React.Component {
            <NavItem><NavLink className="piping" href="/section/Technology" >Technology</NavLink></NavItem>
            <NavItem><NavLink className="piping" href="/section/Sports" >Sports</NavLink></NavItem>
            <NavItem><NavLink className="piping" href="/Search/Gaming" >Gaming</NavLink></NavItem>
-           <NavItem><NavLink className="piping" href="/section/Feedback">Feeback</NavLink></NavItem>
            <NavItem><SearchButton/></NavItem>
             </Nav>
           </Collapse>

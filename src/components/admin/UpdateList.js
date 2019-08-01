@@ -29,7 +29,7 @@ class UpdateList extends React.Component{
                     size = "sm"
                     onClick = {this.onDeleteClick.bind(this, _id)}
                     >&times;</Button> : null}
-                        <h3>{headline}</h3>
+                        <h6>{headline}</h6>
                         <p>{description}</p>
                     </div>
                 ))}

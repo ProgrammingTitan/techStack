@@ -15,17 +15,19 @@ class Thread extends React.Component{
         var realTime = this.state.time.substring(0,10);
         const imgStyle = {
             maxHeight: 300,
-            maxWidth: 300
+            maxWidth: 300,
+            minWidth: 300
           }
 
         const mediaStyle = {
             color: "black",
-            "text-decoration" : "none"
+            "text-decoration" : "none",
+            "margin-bottom" : "5px"
         }
 
 
         return (
-            <div>
+            <Container fluid>
 
       {/* <Jumbotron fluid style={{"background" : "linear-gradient(0deg, rgba(110,157,163,0.23015143557422968) 0%, rgba(176,192,194,0.19373686974789917) 100%, rgba(209,209,209,0.8491990546218487) 100%, rgba(144,63,1,0.8604035364145658) 100%)"}}>
           <Container fluid>
@@ -42,10 +44,14 @@ class Thread extends React.Component{
               </Row>
         </Container>
       </Jumbotron> */}
-      <Media className= "mb-4" href={this.props.data.url} style={mediaStyle}>
-      <Media left href={this.props.data.url}>
-        <Media  className= "mr-4" object src={this.props.data.urlToImage} style={imgStyle} alt="Generic placeholder image" />
-      </Media>
+        <Media href={this.props.data.url} style={mediaStyle}>
+        <Row>
+          <Media left href={this.props.data.url}>
+          <Col  xs="12" sm="12" md="2" lg="2" >
+          <Media  object src={this.props.data.urlToImage} style={imgStyle} alt="Generic placeholder image" />
+          </Col>
+        </Media>
+      <Col  xs="12" sm="12"  md="7" lg="7" >
       <Media body>
         <Media heading >
           {this.props.title}
@@ -53,9 +59,11 @@ class Thread extends React.Component{
             {this.props.data.description}
             <p>Date Published:  {realTime} </p>
         </Media>
+        </Col>
+        </Row>
     </Media>
         
-            </div>
+            </Container>
         );
     }
 }

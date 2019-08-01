@@ -16,10 +16,10 @@ const MainPage = () => {
         <Container fluid>
             <Nav />
             <Row>
-            <Col xs="12" sm="4" md="4" lg="4">
+            <Col xs="12" sm="12" md="2" lg="2">
             <UpdateList />
             </Col> 
-            <Col xs="12" sm="8" md="8" lg="8">
+            <Col xs="12" sm="12" md="10" lg="10">
             <GreetingsBox />
             </Col>
             </Row>

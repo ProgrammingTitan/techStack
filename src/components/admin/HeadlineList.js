@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Button, Media } from 'reactstrap';
+import {Container, Button, Media, Row, Col } from 'reactstrap';
 import { connect } from 'react-redux';
 import { getHeadlines, deleteHeadline } from './../../actions/headlineActions';
 import HeadlineModal from './HeadlineModal';
@@ -12,7 +12,9 @@ import PropTypes from 'prop-types';
 
   const mediaStyle = {
     color: "black",
-    "text-decoration" : "none"
+    "text-decoration" : "none",
+    margin: "auto",
+    "margin-left" : "none"
 }
 
 class HeadlineList extends React.Component{
@@ -29,7 +31,7 @@ class HeadlineList extends React.Component{
 
         const { headlines }  = this.props.headline
         return(
-            <Container>
+            <Container fluid>
             <ul>
                 {headlines.map(({ _id, headline, description, imageURL,url}) => (
                     <div>
@@ -40,15 +42,21 @@ class HeadlineList extends React.Component{
                     onClick = {this.onDeleteClick.bind(this, _id)}
                     >&times;</Button> : null}
                         <Media className= "mb-4" href={url} style={mediaStyle}>
+                            <Row>
       <Media left href={url}>
-        <Media  className= "mr-4" object src={imageURL} style={imgStyle} alt="Generic placeholder image" />
+      <Col  xs="12" sm="12" md="2" lg="2" >
+        <Media  className= "mr-auto" object src={imageURL} style={imgStyle} alt="Generic placeholder image" />
+      </Col>
       </Media>
+      <Col  xs="12" sm="12"  md="7" lg="7" >
       <Media body>
         <Media heading >
           {headline}
         </Media>
             {description}
         </Media>
+        </Col>
+        </Row>
     </Media>
                     </div>
                     //     <a href={url}> 

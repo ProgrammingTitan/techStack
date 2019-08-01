@@ -86,7 +86,7 @@ render(){
                     <Col xs="12" sm="4" md="4" lg="4">
                         <SideBar/>
                     </Col>
-                    <Col xs="12" sm="8" md="8" lg="8">
+                    <Col xs="12" sm="12" md="8" lg="8">
 
 
   
@@ -104,6 +104,9 @@ render(){
                         })
                 }
                 </Col>
+                </Row>
+                <Row>
+                
                 <CategoryJumbo searchString = {this.state.category} />
                 <StoryCard 
                     data = {this.state.upperData}
